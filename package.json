@@ -6,11 +6,11 @@
     "lint": "eslint src",
     "start": "nodemon --exec babel-node src/server.js",
     "clean": "shx rm -rf ./dist",
-    "build": "babel src --ignore spec.js,__mocks__ --out-dir dist",
+    "build": "babel src --out-dir dist --copy-files",
     "dist": "yarn clean && yarn build && yarn update-version",
     "test": "yarn test-ci -- --watch",
     "test-ci": "jest",
-    "update-version": "VERSION=`git describe --tags --always` && sed -i -- 's/undefined/\"'\"$VERSION\"'\"/g' dist/version.js"
+    "update-version": "sed -i -- 's/undefined/\"'\"$VCS_REF\"'\"/g' dist/version.js"
   },
   "dependencies": {
     "chalk": "2.3.0",
