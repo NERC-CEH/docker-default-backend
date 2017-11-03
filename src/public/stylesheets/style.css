@@ -1,0 +1,19 @@
+body {
+  background: #1D262B;
+  color: #eceff1;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.logoContainer {
+  text-align: center;
+}
+
+.logo {
+  height: 300px;
+  margin-top: 60px;
+}
+
+a {
+  color: #239788;
+}
