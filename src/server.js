@@ -12,6 +12,7 @@ logger.add(logger.transports.Console, { timestamp: true, colorize: true });
 const app = express();
 
 // view engine setup
+app.locals.basedir = __dirname;
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
